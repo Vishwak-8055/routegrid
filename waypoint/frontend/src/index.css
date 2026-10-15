@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  background-color: #0A1628;
+}
+
+body {
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  color: #E8EEF5;
+}
+
+/* Leaflet dark basemap tuning -- the default tile imagery is light, so we
+   invert/desaturate it to sit inside the console theme rather than
+   punching a bright rectangle out of a dark UI. */
+.leaflet-container {
+  background: #0A1628;
+}
+.leaflet-tile-pane {
+  filter: invert(1) hue-rotate(180deg) brightness(0.95) contrast(0.9) saturate(0.6);
+}
+.leaflet-marker-icon, .leaflet-popup, .leaflet-control {
+  filter: none;
+}
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #12233B; }
+::-webkit-scrollbar-thumb { background: #24405F; border-radius: 4px; }
