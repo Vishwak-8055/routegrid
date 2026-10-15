@@ -1,4 +1,4 @@
-# Waypoint — Real-Time Fleet Routing & Dispatch Engine
+# RouteGrid — Real-Time Fleet Routing & Dispatch Engine
 
 A capacitated vehicle routing system for a delivery/service fleet: assigns
 and sequences stops across vehicles, then **re-optimizes live** when
